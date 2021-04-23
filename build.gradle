@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    runtimeOnly group: 'software.amazon.awssdk', name: 'bom', version: '2.16.39', ext: 'pom'
+    implementation group: 'com.amazonaws', name: 'aws-java-sdk-s3', version: '1.11.996'
+
+    implementation group: 'org.apache.parquet', name: 'parquet-avro', version: '1.12.0'
+    implementation group: 'org.apache.hadoop', name: 'hadoop-core', version: '1.2.1'
+
+    implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.30'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
