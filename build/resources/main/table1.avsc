@@ -1,0 +1,11 @@
+{ "type": "record",
+  "name": "patent_biblio",
+  "namespace": "com.patsnap.data.test",
+  "fields" : [
+              {"name": "patent_id", "type": "string"},
+              {"name": "ans_name", "type": ["null","string"]},
+              {"name": "apno", "type": ["null","string"]},
+              {"name": "pbdt", "type": ["null","int"]},
+              {"name": "patent_type", "type": "string"}
+             ]
+}
